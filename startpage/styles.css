@@ -1,0 +1,41 @@
+body {
+    margin-left: 8%;
+    margin-right: 15%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    height: 95vh;
+    text-align: center;
+    background-color: #222f3e;
+}
+
+#greeting, #time, #date {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    color: #ffffff;
+    font-size: 28px;
+}
+
+#gridTwo, #gridThree, #gridFour, #gridFive {
+    font-size: 16px;
+    color: #576574;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover{
+    color: cadetblue;
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    line-height: 10px;
+}
