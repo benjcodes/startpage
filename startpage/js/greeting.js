@@ -1,17 +1,31 @@
-let tdyDate = new Date();
-let hh = tdyDate.getHours();
+function greetings() {
+    let tdyDate = new Date();
+    let hh = tdyDate.getHours();
+    let mm = tdyDate.getMinutes();
+    let ss = tdyDate.getSeconds();
+    let time = document.getElementById("time");
+    
+    let m = checkTime(mm);
+    let s = checkTime(ss);
+    time.textContent = hh + ":" + m + ":" + s;
 
-let greeting = document.getElementById("greeting");
-let time = document.getElementById("time");
-let date = document.getElementById("date");
+    let greeting = document.getElementById("greeting");
+        if (hh > 1 && hh < 12) {
+            greeting.innerHTML = 'Good Morning, Ben!'
+                } else if (hh >= 12 && hh < 19) {
+                    greeting.innerHTML = 'Good Afternoon, Ben!'
+                        } else {
+                            greeting.innerHTML = 'Good Evening, Ben!'
+                                    }
 
-if (hh > 1 && hh < 12) {
-    greeting.innerHTML = 'Good Morning, Ben!'
-} else if (hh >= 12 && hh < 19) {
-    greeting.innerHTML = 'Good Afternoon, Ben!'
-} else {
-    greeting.innerHTML = 'Good Evening, Ben!'
+    let date = document.getElementById("date");
+    date.innerHTML = tdyDate.toLocaleDateString();
 }
 
-time.innerHTML = tdyDate.toLocaleTimeString();
-date.innerHTML = tdyDate.toLocaleDateString();
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    };
+    return i;
+}
+setInterval(greetings, 500);
