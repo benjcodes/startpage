@@ -5,9 +5,10 @@ function greetings() {
     let ss = tdyDate.getSeconds();
     let time = document.getElementById("time");
     
+    lrt h = checkTime(hh);
     let m = checkTime(mm);
     let s = checkTime(ss);
-    time.textContent = hh + ":" + m + ":" + s;
+    time.textContent = h + ":" + m + ":" + s;
 
     let greeting = document.getElementById("greeting");
         if (hh > 1 && hh < 12) {
