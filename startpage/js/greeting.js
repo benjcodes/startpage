@@ -5,7 +5,7 @@ function greetings() {
     let ss = tdyDate.getSeconds();
     let time = document.getElementById("time");
     
-    lrt h = checkTime(hh);
+    let h = checkTime(hh);
     let m = checkTime(mm);
     let s = checkTime(ss);
     time.textContent = h + ":" + m + ":" + s;
